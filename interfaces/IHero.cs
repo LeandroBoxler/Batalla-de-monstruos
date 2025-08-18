@@ -9,6 +9,8 @@ namespace MiJuego.Interface
         int Experience { get; set; }
         int Mana { get; set; }
 
+        string Weapone { get; set; }
+
     List<Item> Inventary { get; set; }
 
         void ShowStats();

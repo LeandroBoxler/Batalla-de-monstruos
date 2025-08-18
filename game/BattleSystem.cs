@@ -8,9 +8,9 @@ public class BattleSystem
 
         while (hero.Health > 0 && monster.Health > 0)
         {
-              Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Presione 1 para atacar.");
-               Console.WriteLine("Presione 2 para ver inventario y stats.");
+            Console.WriteLine("Presione 2 para para abrir inventario y stats.");
             string? option = Console.ReadLine();
 
             if (option == "1")
@@ -29,14 +29,38 @@ public class BattleSystem
             }
 
             }
-            
-                 if (option == "2")
+
+            if (option == "2")
             {
-                hero.ShowStats();
+                Console.WriteLine("Seleccion el item");
+                for (int i = 0; i < hero.Inventary.Count; i++)
+                {
+                    Console.WriteLine($"{i+1} - {hero.Inventary[i].Name}");
+
+                }
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out int index))
+                {
+                    int indexSelect = index - 1;
+
+                    for (int i = 0; i < hero.Inventary.Count; i++)
+                    {
+                        if (indexSelect == i)
+                        {
+                            hero.Inventary[indexSelect].Use(hero, monster);
+                            hero.Inventary.Remove(hero.Inventary[indexSelect]);
+
+                        }
+
+                    }
+                }
+                else
+                {
+                Console.WriteLine("Valor invalido.");
+
+                }
+
             }
-
-          
-
         }
 
         if (hero.Health > 0)

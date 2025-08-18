@@ -18,7 +18,6 @@ public class HeroFactory
         var availableItems = pack.Initial;
 
         List<Item> initialItems = new List<Item>();
-
         while (initialItems.Count < 4)
         {
             for (int i = 0; i < availableItems.Count; i++)

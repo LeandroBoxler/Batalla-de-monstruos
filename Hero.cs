@@ -23,7 +23,6 @@ public class Hero : IHero
         Experience = 0;
         Dexterity = 15;
         Mana = 10;
-
     }
     public void ShowStats()
     {
