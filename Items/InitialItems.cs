@@ -9,7 +9,6 @@ Item healthPotion = new HealthPotion();
 Item rainScroll = new RainScroll();
     Item oilBomb = new OilBomb();
 
-    IWeapone SpearWood = new SpearWood();
 
     public InitialItems()
     {

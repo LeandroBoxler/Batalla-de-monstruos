@@ -15,11 +15,11 @@ public class Dungeon
     {
         for (int i = 1; i <= totalRooms; i++)
         {
-            Console.WriteLine($"🌑 Habitación {i} - ¡Un nuevo enemigo aparece!");
+            Console.WriteLine($"Habitación {i} -Te espera un nuevo enemigo!");
             IMonster monster = MonsterFactory.CreateMonster();
 
             BattleSystem battle = new BattleSystem(hero, monster);
-
+bool heroWon = battle.StartBattle();
             if (hero.Health <= 0)
             {
                 Console.WriteLine("💀 Has sido derrotado...");
@@ -29,6 +29,6 @@ public class Dungeon
             Console.WriteLine($"🏆 Derrotaste al {monster.Name} y avanzas a la siguiente sala.");
         }
 
-        Console.WriteLine("🎉 ¡Has superado la mazmorra!");
+        Console.WriteLine("Has superado la mazmorra!");
     }
 }
