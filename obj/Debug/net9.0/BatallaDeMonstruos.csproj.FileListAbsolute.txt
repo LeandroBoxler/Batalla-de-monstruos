@@ -1,4 +1,0 @@
-C:\Users\estudiante\Desktop\EMILIANO\C#\BatallaDeMonstruos\obj\Debug\net9.0\BatallaDeMonstruos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\estudiante\Desktop\EMILIANO\C#\BatallaDeMonstruos\obj\Debug\net9.0\BatallaDeMonstruos.AssemblyInfoInputs.cache
-C:\Users\estudiante\Desktop\EMILIANO\C#\BatallaDeMonstruos\obj\Debug\net9.0\BatallaDeMonstruos.AssemblyInfo.cs
-C:\Users\estudiante\Desktop\EMILIANO\C#\BatallaDeMonstruos\obj\Debug\net9.0\BatallaDeMonstruos.csproj.CoreCompileInputs.cache
