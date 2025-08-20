@@ -30,7 +30,7 @@ public class Monster : IMonster
     public void ShowStats()
     {
      
-        Console.WriteLine($"{Name} - Vida: {Health} - Efectos: {string.Join(", ", EffectsStatus)}");
+        Console.WriteLine($"{Name} - Vida: {Health} - Efectos:  { string.Join(", ", EffectsStatus)}");
 
 
 

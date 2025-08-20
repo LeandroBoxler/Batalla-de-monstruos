@@ -11,8 +11,9 @@ public class Hero : IHero
     public int Dexterity { get; set; }
     public int Experience { get; set; }
     public int Mana { get; set; }
+     public string Weapone { get; set; }
 
-    public List<Item> Inventary { get; set;} = new List<Item>();
+    public List<Item> Inventary { get; set; } = new List<Item>();
 
     public Hero(string name)
     {
@@ -23,6 +24,7 @@ public class Hero : IHero
         Experience = 0;
         Dexterity = 15;
         Mana = 10;
+        Weapone = "Cuchillo de cortar manteca";
     }
     public void ShowStats()
     {
@@ -33,8 +35,10 @@ public class Hero : IHero
         Console.WriteLine($"Vida: {Health}");
 
         Console.WriteLine($"Defensa: {Defense}");
+        
+        Console.WriteLine($"Llevas equipado: {Weapone}");
 
-          Console.WriteLine("--- Inventario ---");
+        Console.WriteLine("--- Inventario ---");
 
     for (int i = 0; i < Inventary.Count; i++)
     {
