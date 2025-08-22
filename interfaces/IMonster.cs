@@ -7,7 +7,12 @@ public interface IMonster
     int Attack { get; set; }
     int Defense { get; set; }
 
+
+
     List<string> EffectsStatus { get; }
+
+    public List<Item> Loot { get; set; }
+
 
     int Level { get; set; }
 

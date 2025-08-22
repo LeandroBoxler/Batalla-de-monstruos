@@ -9,11 +9,17 @@ public class Monster : IMonster
     public int Health { get; set; }
 
     public int Level { get; set; }
+
+    public List<Item> Loot { get; set; } = new List<Item>();
     public List<string> EffectsStatus { get; } = new List<string>();
 
-
+    
     public Monster(string name, int health, int attack, int defense)
     {
+        ItemsDrop ItemsDrop  = new ItemsDrop();
+
+        Loot.AddRange(ItemsDrop.Drop);
+            
         Name = name;
 
         Health = health;
@@ -24,15 +30,12 @@ public class Monster : IMonster
 
         Level = 1;
 
-
-
     }
     public void ShowStats()
     {
-     
-        Console.WriteLine($"{Name} - Vida: {Health} - Efectos:  { string.Join(", ", EffectsStatus)}");
 
-
+        Console.WriteLine($"{Name} - Vida: {Health} - Efectos:  {string.Join(", ", EffectsStatus)}");
 
     }
+
 }
