@@ -12,7 +12,6 @@ public class BattleSystem
         Console.WriteLine($"Te enfrentas a un {monster.Name}!");
     }
 
-    // Método que inicia la batalla y devuelve true si el héroe gana
     public bool StartBattle()
     {
         while (hero.Health > 0 && monster.Health > 0)
@@ -45,8 +44,13 @@ public class BattleSystem
         }
 
         bool heroWon = hero.Health > 0;
-        if(heroWon)
+        if (heroWon)
+        {
             Console.WriteLine($"✅ Venciste al {monster.Name}!");
+            Console.WriteLine($"Seleccione un item");
+            new DropSystem(monster,hero);
+
+        }
         else
             Console.WriteLine("💀 Has sido derrotado...");
 
@@ -86,10 +90,15 @@ public class BattleSystem
                 hero.Inventary[indexSelect].Use(hero, monster);
                 hero.Inventary.RemoveAt(indexSelect);
 
-                int damageReceived = monster.Attack - hero.Defense;
-                if (damageReceived < 0) damageReceived = 0;
-                hero.Health -= damageReceived;
-                Console.WriteLine($"Recibiste {damageReceived} de daño.");
+                if (monster.Health > 0)
+                {
+
+                    int damageReceived = monster.Attack - hero.Defense;
+
+                    hero.Health -= damageReceived;
+                    Console.WriteLine($"Recibiste {damageReceived} de daño.");
+                }
+                
             }
             else Console.WriteLine("Valor invalido.");
         }
