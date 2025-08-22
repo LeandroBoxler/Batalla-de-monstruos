@@ -19,7 +19,7 @@ public class Dungeon
             IMonster monster = MonsterFactory.CreateMonster();
 
             BattleSystem battle = new BattleSystem(hero, monster);
-bool heroWon = battle.StartBattle();
+            bool heroWon = battle.StartBattle();
             if (hero.Health <= 0)
             {
                 Console.WriteLine("💀 Has sido derrotado...");
