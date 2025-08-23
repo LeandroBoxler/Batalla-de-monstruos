@@ -8,7 +8,6 @@ public class Monster : IMonster
     public int Defense { get; set; }
     public int Health { get; set; }
 
-    public int Level { get; set; }
 
     public List<Item> Loot { get; set; } = new List<Item>();
     public List<string> EffectsStatus { get; } = new List<string>();
@@ -28,7 +27,6 @@ public class Monster : IMonster
 
         Defense = defense;
 
-        Level = 1;
 
     }
     public void ShowStats()

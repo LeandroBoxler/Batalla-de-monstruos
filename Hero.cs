@@ -6,8 +6,6 @@ public class Hero : IHero
     public int Health { get; set; }
     public int BaseAttack { get; set; }
     public int Defense { get; set; }
-    public int Experience { get; set; }
-    public int Mana { get; set; }
 
     public IWeapone? Weapone { get; set; }
     public List<Item> Inventary { get; set; } = new List<Item>();
@@ -20,8 +18,6 @@ public class Hero : IHero
         Health = 120;
         BaseAttack = 15;
         Defense = 10;
-        Experience = 0;
-        Mana = 10;
         Weapone = null;
     }
 

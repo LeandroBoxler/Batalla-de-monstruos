@@ -6,8 +6,6 @@ namespace MiJuego.Interface
         int Health { get; set; }
         int BaseAttack { get; set; }
         int Defense { get; set; }
-        int Experience { get; set; }
-        int Mana { get; set; }
 
         IWeapone? Weapone { get; set; }
 

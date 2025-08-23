@@ -15,7 +15,7 @@ class Program
         IMonster monster = MonsterFactory.CreateMonster();
         monster.ShowStats();
 
-        Dungeon dungeon = new Dungeon(hero, 2);
+        Dungeon dungeon = new Dungeon(hero, 10);
         dungeon.Start();
          hero.ShowStats();
         Console.WriteLine("GAME OVER...");

@@ -14,7 +14,6 @@ public interface IMonster
     public List<Item> Loot { get; set; }
 
 
-    int Level { get; set; }
 
     void ShowStats();
 }
